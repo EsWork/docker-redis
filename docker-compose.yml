@@ -1,7 +1,7 @@
 nginx:
   image: johnwu/redis:latest
   ports:
-    - "637980:6379"
+    - "6379:6379"
   volumes:
     - /srv/docker/redis:/var/lib/redis
   restart: always
