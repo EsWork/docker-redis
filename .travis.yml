@@ -10,5 +10,5 @@ install:
   
 script: 
   - docker run --name redis_server -d -v /run/redis johnwu/redis; sleep 5
-  - docker ps -a | grep -q redis
+  - docker ps -a | grep -q redis_server
   - docker run --volumes-from=redis_server johnwu/redis redis-cli -s /var/run/redis/redis.sock PING
