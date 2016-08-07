@@ -9,7 +9,7 @@ ENV REDIS_VERSION=3.2.3 \
 
 
 COPY setup/ ${REDIS_SETUP_DIR}/
-RUN bash ${REDIS_SETUP_DIR}/install.sh
+RUN sh ${REDIS_SETUP_DIR}/install.sh
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
