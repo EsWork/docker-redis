@@ -18,7 +18,7 @@ cd ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}
 
 make && make install
 
-mkdir -p /etc/nginx/
+mkdir -p /etc/redis/
 cp redis.conf /etc/redis/redis.conf
 
 sed 's/^daemonize yes/daemonize no/' -i /etc/redis/redis.conf
