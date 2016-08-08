@@ -16,11 +16,10 @@ wget -cq ${REDIS_DOWNLOAD_URL} -O ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}.
 tar -zxf ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}.tar.gz
 cd ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}
 
+make && make install
+
 mkdir -p /etc/nginx/
-cp ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}/redis.conf /etc/nginx/redis.conf
-
-
-make -j$(nproc) && make install
+cp redis.conf /etc/nginx/redis.conf
 
 sed 's/^daemonize yes/daemonize no/' -i /etc/redis/redis.conf
 sed 's/^bind 127.0.0.1/bind 0.0.0.0/' -i /etc/redis/redis.conf

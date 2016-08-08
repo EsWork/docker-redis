@@ -6,7 +6,7 @@
 
 # Introduction
 
-Redis-3.2.3
+基于`Alpine linux`镜像构建`Redis-3.2.3`
 
 # Getting started
 
