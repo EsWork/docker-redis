@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/vla/docker-redis.svg?branch=master)](https://travis-ci.org/vla/docker-redis)
+[![Build Status ](https://travis-ci.org/vla/docker-redis.svg?branch=master)](https://travis-ci.org/vla/docker-redis)
 
 # Supported tags and respective `Dockerfile` links
 
-- [`latest` , `3.2.2`  (3.2.2/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
+- [`latest` , `3.2.3`  (3.2.3/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
 
 # Introduction
 
-Redis-3.2.2
+Redis-3.2.3
 
 # Getting started
 
