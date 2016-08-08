@@ -19,7 +19,7 @@ cd ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}
 make && make install
 
 mkdir -p /etc/nginx/
-cp redis.conf /etc/nginx/redis.conf
+cp redis.conf /etc/redis/redis.conf
 
 sed 's/^daemonize yes/daemonize no/' -i /etc/redis/redis.conf
 sed 's/^bind 127.0.0.1/bind 0.0.0.0/' -i /etc/redis/redis.conf
