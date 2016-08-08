@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
