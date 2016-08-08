@@ -13,7 +13,7 @@ addgroup -S redis && adduser -S -G ${REDIS_USER} ${REDIS_USER}
 mkdir -p ${REDIS_SETUP_DIR}/src/
 wget -cq ${REDIS_DOWNLOAD_URL} -O ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}.tar.gz
 tar -zxf ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}.tar.gz
-cd ${REDIS_SETUP_DIR}/src/redis*
+cd ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}
 
 make -j$(nproc) && make install
 
