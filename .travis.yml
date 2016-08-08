@@ -9,6 +9,6 @@ install:
   - docker build -t johnwu/redis .
   
 script: 
-  - docker run --name redis_server -d johnwu/redis; sleep 5
+  - docker run --name redis_server -d --restart=always johnwu/redis; sleep 5
   - docker ps -a | grep -q redis_server
   - docker exec -it redis_server redis-cli -s /run/redis/redis.sock PING

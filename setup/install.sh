@@ -29,11 +29,11 @@ sed '/^logfile/d' -i /etc/redis/redis.conf
 
 mkdir -p /run/redis
 chmod -R 0755 /run/redis
-chown -R ${REDIS_USER}:${REDIS_USER} /run/redis
+chown -R ${REDIS_USER}:root /run/redis
 
 mkdir -p ${REDIS_LOG_DIR}
 chmod -R 0755 ${REDIS_LOG_DIR}
-chown -R ${REDIS_USER}:${REDIS_USER} ${REDIS_LOG_DIR}
+chown -R ${REDIS_USER}:root ${REDIS_LOG_DIR}
 
 apk del ${BUILD_DEPENDENCIES}
 rm -rf ${REDIS_SETUP_DIR}/
