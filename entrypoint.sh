@@ -17,7 +17,7 @@ fi
 echo ${1}
 if [[ -z ${1} ]]; then
   echo "Starting redis-server..."
-  exec $(which redis-server) -- /etc/redis/redis.conf \
+  exec $(which redis-server) /etc/redis/redis.conf \
   ${REDIS_PASSWORD:+--requirepass $REDIS_PASSWORD} ${EXTRA_ARGS}
 else
   exec "$@"
