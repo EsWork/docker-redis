@@ -44,8 +44,8 @@ docker run --name redis -d \
 
 ```bash
 docker run --name redis -d --restart=always \
-  --p 6379:6379 \
-  --v /srv/docker/redis:/var/lib/redis \
+  -p 6379:6379 \
+  -v /srv/docker/redis:/var/lib/redis \
   johnwu/redis:latest --logfile /var/log/redis/redis-server.log
 ```
 访问redis日志位于`/var/log/redis/redis-server.log`
