@@ -3,6 +3,8 @@ set -e
 
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
 
+#TODO MapUserUID
+
 mkdir -p ${REDIS_DATA_DIR}
 chmod -R 0755 ${REDIS_DATA_DIR}
 chown -R ${REDIS_USER}:${REDIS_USER} ${REDIS_DATA_DIR}
