@@ -1,9 +1,6 @@
 #!/bin/sh
 set -e
-echo $@
-echo ${1}
-echo "${@:2}"
-echo $(which redis-server)
+
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
 
 mkdir -p ${REDIS_DATA_DIR}
@@ -17,8 +14,7 @@ elif [[ ${1} == redis-server || ${1} == $(which redis-server) ]]; then
   EXTRA_ARGS="${@:2}"
   set --
 fi
-echo "A $@"
-echo "B ${EXTRA_ARGS}"
+
 
 if [[ -z ${1} ]]; then
   echo "Starting redis-server..."
