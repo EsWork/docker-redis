@@ -17,5 +17,5 @@ RUN chmod 755 /sbin/entrypoint.sh
 EXPOSE 6379/tcp
 
 VOLUME ["${REDIS_DATA_DIR}"]
-WORKDIR ["${REDIS_DATA_DIR}"]
+WORKDIR ${REDIS_DATA_DIR}
 ENTRYPOINT ["/sbin/entrypoint.sh"]
