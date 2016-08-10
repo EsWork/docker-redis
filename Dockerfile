@@ -19,3 +19,4 @@ EXPOSE 6379/tcp
 VOLUME ["${REDIS_DATA_DIR}"]
 WORKDIR ${REDIS_DATA_DIR}
 ENTRYPOINT ["/sbin/entrypoint.sh"]
+CMD ["/usr/local/bin/redis-server"]
