@@ -19,6 +19,7 @@ cd ${REDIS_SETUP_DIR}/src/redis-${REDIS_VERSION}
 make && make install
 
 mkdir -p /etc/redis/
+chown -R ${REDIS_USER}:${REDIS_USER} /etc/redis/
 cp redis.conf /etc/redis/redis.conf
 
 sed 's/^daemonize yes/daemonize no/' -i /etc/redis/redis.conf
