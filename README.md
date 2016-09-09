@@ -21,7 +21,7 @@ docker pull johnwu/redis:latest
 或者你可以自己构建镜像
 
 ```bash
-docker build -t johnwu/redis github.com/johnwu/docker-redis
+docker build -t johnwu/redis github.com/vla/docker-redis
 ```
 
 ## Quickstart
