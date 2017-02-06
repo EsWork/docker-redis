@@ -2,11 +2,11 @@
 
 # Supported tags and respective `Dockerfile` links
 
-- [`latest` , `3.2.3`  (3.2.3/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
+- [`latest` , `3.2.7`  (3.2.7/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
 
 # Introduction
 
-基于`Alpine linux`镜像构建`Redis-3.2.3`
+基于`Alpine linux`镜像构建`Redis-3.2.7`
 
 # Getting started
 
