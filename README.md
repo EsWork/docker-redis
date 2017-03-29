@@ -1,30 +1,33 @@
-[![Build Status ](https://travis-ci.org/vla/docker-redis.svg?branch=master)](https://travis-ci.org/vla/docker-redis)
+[![Build Status](https://travis-ci.org/EsWork/docker-redis.svg?branch=master)](https://travis-ci.org/EsWork/docker-redis)
 
-# Supported tags and respective `Dockerfile` links
+## Supported tags and respective `Dockerfile` links
 
-- [`latest` , `3.2.7`  (3.2.7/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
+- [`latest` , `3.2.8`  (3.2.8/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
 
-# Introduction
+Introduction
+---
 
-基于`Alpine linux`镜像构建`Redis-3.2.7`
+基于`Alpine linux`镜像构建`Redis-3.2.8`
 
-# Getting started
+Getting started
 
-## Installation
+Installation
+---
 
-自动化构建镜像的可用[Dockerhub](https://hub.docker.com/r/johnwu/redis)和推荐的安装方法
+自动化构建镜像的可用[Dockerhub](https://hub.docker.com/r/eswork/redis)和推荐的安装方法
 
 ```bash
-docker pull johnwu/redis:latest
+docker pull eswork/redis:latest
 ```
 
 或者你可以自己构建镜像
 
 ```bash
-docker build -t johnwu/redis github.com/vla/docker-redis
+docker build -t eswork/redis github.com/vla/docker-redis
 ```
 
-## Quickstart
+Quickstart
+---
 
 运行Redis：
 
@@ -32,13 +35,13 @@ docker build -t johnwu/redis github.com/vla/docker-redis
 docker run --name redis -d \
   -p 6379:6379 --restart=always \
   -v /srv/docker/redis:/var/lib/redis \
-  johnwu/redis
+  eswork/redis
 ```
 
 或者您可以使用示例[docker-compose.yml](docker-compose.yml)文件启动容器
 
-
-## Logs
+Logs
+---
 
 使用`--logfile`记录日志
 
@@ -46,7 +49,7 @@ docker run --name redis -d \
 docker run --name redis -d --restart=always \
   -p 6379:6379 \
   -v /srv/docker/redis:/var/lib/redis \
-  johnwu/redis:latest --logfile /var/log/redis/redis-server.log
+  eswork/redis:latest --logfile /var/log/redis/redis-server.log
 ```
 访问redis日志位于`/var/log/redis/redis-server.log`
 ```bash

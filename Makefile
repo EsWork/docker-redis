@@ -1,7 +1,7 @@
 all: build
 
 build:
-	@docker build --tag=johnwu/redis .
+	@docker build --tag=eswork/redis .
 
 release: build
-	@docker build --tag=johnwu/redis:$(shell cat VERSION) .
+	@docker build --tag=eswork/redis:$(shell cat VERSION) .
