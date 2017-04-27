@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/EsWork/docker-redis.svg?branch=master)](https://travis-ci.org/EsWork/docker-redis)
+[![Build Status](https://travis-ci.org/EsWork/docker-redis.svg?branch=master)](https://travis-ci.org/EsWork/docker-redis) 
+[![](https://images.microbadger.com/badges/image/eswork/redis.svg)](https://microbadger.com/images/eswork/redis "Get your own image badge on microbadger.com")
 
 ## Supported tags and respective `Dockerfile` links
 
