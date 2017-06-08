@@ -3,7 +3,7 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` , `3.2.8`  (3.2.8/Dockerfile)](https://github.com/vla/docker-redis/blob/master/Dockerfile)
+- [`latest` , `3.2.8`  (3.2.8/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
 
 Introduction
 ---
@@ -24,7 +24,7 @@ docker pull eswork/redis:latest
 或者你可以自己构建镜像
 
 ```bash
-docker build -t eswork/redis github.com/vla/docker-redis
+docker build -t eswork/redis https://github.com/EsWork/docker-redis
 ```
 
 Quickstart
