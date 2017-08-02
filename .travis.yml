@@ -1,11 +1,13 @@
+sudo: required
 language: bash
 services: docker
+dist: trusty
 
 branches: 
   only: 
     - master
 
-install:
+before_install:
   - docker build -t eswork/redis .
   
 script: 

@@ -1,7 +1,7 @@
-FROM alpine:3.5
+FROM alpine:3.6
 LABEL maintainer "v.la@live.cn"
 
-ENV REDIS_VERSION=3.2.8 \
+ENV REDIS_VERSION=3.2.10 \
     REDIS_USER=redis \
     REDIS_DATA_DIR=/var/lib/redis \
     REDIS_LOG_DIR=/var/log/redis \

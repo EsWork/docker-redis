@@ -3,12 +3,12 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` , `3.2.8`  (3.2.8/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
+- [`latest` , `3.2.10`  (3.2.10/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
 
 Introduction
 ---
 
-基于`Alpine linux`镜像构建`Redis-3.2.8`
+基于`Alpine linux`镜像构建`Redis-3.2.10`
 
 Getting started
 
