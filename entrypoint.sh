@@ -7,7 +7,6 @@ function log() {
   echo `date` $ME - $@
 }
 
-
 if [ "$1" = 'redis-server' ]; then
 log "[ Starting ${SERVICE_NAME}... ]"
 chown -R ${SERVICE_USER}:${SERVICE_GROUP} ${REDIS_DATA_DIR} ${REDIS_LOG_DIR} ${SERVICE_CONF}
