@@ -3,19 +3,16 @@ set -e
 
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
 
-mkdir -p ${REDIS_DATA_DIR}
-chmod -R 0755 ${REDIS_DATA_DIR}
-chown -R ${REDIS_USER}:${REDIS_USER} ${REDIS_DATA_DIR}
+function log() {
+  echo `date` $ME - $@
+}
 
-if [ "${1:0:1}" = '-' ]; then
-  EXTRA_ARGS="$@"
-  set --
+
+if [ "$1" = 'redis-server' ]; then
+log "[ Starting ${SERVICE_NAME}... ]"
+chown -R ${SERVICE_USER}:${SERVICE_GROUP} ${REDIS_DATA_DIR} ${REDIS_LOG_DIR} ${SERVICE_CONF}
+exec su-exec ${SERVICE_USER}:${SERVICE_GROUP} "$@" ${SERVICE_CONF} \
+${REDIS_PASSWORD:+--requirepass $REDIS_PASSWORD}
 fi
 
-if [[ -z ${1} ]]; then
-  echo "Starting redis-server..."
-  exec su-exec ${REDIS_USER} $(which redis-server) /etc/redis/redis.conf \
-  ${REDIS_PASSWORD:+--requirepass $REDIS_PASSWORD} ${EXTRA_ARGS}
-else
-  exec "$@"
-fi
+exec "$@"
