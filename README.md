@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/EsWork/docker-redis.svg?branch=master)](https://travis-ci.org/EsWork/docker-redis) 
-[![](https://images.microbadger.com/badges/image/eswork/redis.svg)](https://microbadger.com/images/eswork/redis "Get your own image badge on microbadger.com")
+
+|Image Tag | Metadata from image |
+|--------- | :------------ |
+|[![](https://images.microbadger.com/badges/version/eswork/redis.svg)](https://microbadger.com/images/eswork/redis "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis.svg)](https://microbadger.com/images/eswork/redis "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:3.2.8.svg)](https://microbadger.com/images/eswork/redis:3.2.8 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:3.2.8.svg)](https://microbadger.com/images/eswork/redis:3.2.8 "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:3.2.10.svg)](https://microbadger.com/images/eswork/redis:3.2.10 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:3.2.10.svg)](https://microbadger.com/images/eswork/redis:3.2.10 "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.1.svg)](https://microbadger.com/images/eswork/redis:4.0.1 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.1.svg)](https://microbadger.com/images/eswork/redis:4.0.1 "Get your own image badge on microbadger.com")
+
 
 ## Supported tags and respective `Dockerfile` links
 
