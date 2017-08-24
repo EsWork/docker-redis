@@ -23,8 +23,8 @@ ARG REDIS_DOWNLOAD_SHA=2049cd6ae9167f258705081a6ef23bb80b7eff9ff3d0d7481e89510f2
 # &&  echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/community" >> /etc/apk/repositories
 
 
-RUN apk -U upgrade && apk add --update --no-cache bash libressl su-exec curl \
-&& apk add --no-cache --virtual .build-deps gcc coreutils linux-headers make musl-dev \
+RUN apk -U upgrade && apk add --update --no-cache su-exec \
+&& apk add --no-cache --virtual .build-deps gcc coreutils linux-headers make musl-dev curl \
 && wget -cq ${REDIS_DOWNLOAD_URL} -O /tmp/redis-${REDIS_VERSION}.tar.gz \
 && echo "$REDIS_DOWNLOAD_SHA /tmp/redis-${REDIS_VERSION}.tar.gz" | sha256sum -c - \
 && mkdir -p /tmp/redis \
