@@ -7,7 +7,7 @@ ENV SERVICE_NAME=redis \
     SERVICE_UID=1000 \
     SERVICE_GID=1000 \
     SERVICE_CONF=/etc/redis/redis.conf \
-    REDIS_VERSION=4.0.1 \
+    REDIS_VERSION=4.0.2 \
     REDIS_DATA_DIR=/var/lib/redis \
     REDIS_LOG_DIR=/var/log/redis 
 
