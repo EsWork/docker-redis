@@ -6,17 +6,19 @@
 |[![](https://images.microbadger.com/badges/version/eswork/redis:3.2.8.svg)](https://microbadger.com/images/eswork/redis:3.2.8 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:3.2.8.svg)](https://microbadger.com/images/eswork/redis:3.2.8 "Get your own image badge on microbadger.com")
 |[![](https://images.microbadger.com/badges/version/eswork/redis:3.2.10.svg)](https://microbadger.com/images/eswork/redis:3.2.10 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:3.2.10.svg)](https://microbadger.com/images/eswork/redis:3.2.10 "Get your own image badge on microbadger.com")
 |[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.1.svg)](https://microbadger.com/images/eswork/redis:4.0.1 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.1.svg)](https://microbadger.com/images/eswork/redis:4.0.1 "Get your own image badge on microbadger.com")
-|[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.1 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.2 "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.2 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.2 "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.6.svg)](https://microbadger.com/images/eswork/redis:4.0.6 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.6.svg)](https://microbadger.com/images/eswork/redis:4.0.6 "Get your own image badge on microbadger.com")
+
 
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` , `4.0.2`  (4.0.2/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
+- [`latest` , `4.0.6`  (4.0.6/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
 
 Introduction
 ---
 
-基于`Alpine linux`镜像构建`Redis-4.0.2`
+基于`Alpine linux`镜像构建`Redis-4.0.6`
 
 Getting started
 
