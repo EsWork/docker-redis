@@ -9,17 +9,18 @@
 |[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.2 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.2.svg)](https://microbadger.com/images/eswork/redis:4.0.2 "Get your own image badge on microbadger.com")
 |[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.6.svg)](https://microbadger.com/images/eswork/redis:4.0.6 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.6.svg)](https://microbadger.com/images/eswork/redis:4.0.6 "Get your own image badge on microbadger.com")  
 |[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.9.svg)](https://microbadger.com/images/eswork/redis:4.0.9 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.9.svg)](https://microbadger.com/images/eswork/redis:4.0.9 "Get your own image badge on microbadger.com")
+|[![](https://images.microbadger.com/badges/version/eswork/redis:4.0.10.svg)](https://microbadger.com/images/eswork/redis:4.0.10 "Get your own version badge on microbadger.com")|[![](https://images.microbadger.com/badges/image/eswork/redis:4.0.10.svg)](https://microbadger.com/images/eswork/redis:4.0.10 "Get your own image badge on microbadger.com")
 
 
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` , `4.0.9`  (4.0.9/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
+- [`latest` , `4.0.10`  (4.0.10/Dockerfile)](https://github.com/EsWork/docker-redis/blob/master/Dockerfile)
 
 Introduction
 ---
 
-基于`Alpine linux`镜像构建`Redis-4.0.9`
+基于`Alpine linux`镜像构建`Redis-4.0.10`
 
 Getting started
 
