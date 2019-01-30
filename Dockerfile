@@ -7,7 +7,7 @@ ENV SERVICE_NAME=redis \
     SERVICE_UID=1000 \
     SERVICE_GID=1000 \
     SERVICE_CONF=/etc/redis/redis.conf \
-    REDIS_VERSION=4.0.12 \
+    REDIS_VERSION=5.0.2 \
     REDIS_DATA_DIR=/var/lib/redis \
     REDIS_LOG_DIR=/var/log/redis 
 
@@ -16,7 +16,7 @@ LABEL description="redis built from source" \
       maintainer="JohnWu <v.la@live.cn>"
       
 ARG REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
-ARG REDIS_DOWNLOAD_SHA=6447259d2eed426a949c9c13f8fdb2d91fb66d9dc915dd50db13b87f46d93162
+ARG REDIS_DOWNLOAD_SHA=937dde6164001c083e87316aa20dad2f8542af089dfcb1cbb64f9c8300cd00ed
 
 #china mirrors repos
 RUN echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/main" > /etc/apk/repositories \
