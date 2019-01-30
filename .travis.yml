@@ -5,7 +5,7 @@ dist: trusty
 
 branches: 
   only: 
-    - master
+    - master 
 
 before_install:
   - docker build -t eswork/redis .

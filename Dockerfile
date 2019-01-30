@@ -7,7 +7,7 @@ ENV SERVICE_NAME=redis \
     SERVICE_UID=1000 \
     SERVICE_GID=1000 \
     SERVICE_CONF=/etc/redis/redis.conf \
-    REDIS_VERSION=4.0.11 \
+    REDIS_VERSION=4.0.12 \
     REDIS_DATA_DIR=/var/lib/redis \
     REDIS_LOG_DIR=/var/log/redis 
 
@@ -16,15 +16,22 @@ LABEL description="redis built from source" \
       maintainer="JohnWu <v.la@live.cn>"
       
 ARG REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
-ARG REDIS_DOWNLOAD_SHA=fc53e73ae7586bcdacb4b63875d1ff04f68c5474c1ddeda78f00e5ae2eed1bbb
+ARG REDIS_DOWNLOAD_SHA=6447259d2eed426a949c9c13f8fdb2d91fb66d9dc915dd50db13b87f46d93162
 
 #china mirrors repos
-# RUN echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/main" > /etc/apk/repositories \
-# &&  echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/community" >> /etc/apk/repositories
+RUN echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/main" > /etc/apk/repositories \
+&&  echo "https://mirrors.ustc.edu.cn/alpine/latest-stable/community" >> /etc/apk/repositories
 
 
-RUN apk -U upgrade && apk add --update --no-cache su-exec \
-&& apk add --no-cache --virtual .build-deps gcc coreutils linux-headers make musl-dev curl \
+RUN apk -U upgrade && apk add --update --no-cache su-exec>=0.2 tzdata \
+&& apk add --no-cache --virtual .build-deps \
+  gcc \
+  jemalloc-dev \
+  coreutils \
+  linux-headers \
+  make \
+  musl-dev \
+  curl \
 && wget -cq ${REDIS_DOWNLOAD_URL} -O /tmp/redis-${REDIS_VERSION}.tar.gz \
 && echo "$REDIS_DOWNLOAD_SHA /tmp/redis-${REDIS_VERSION}.tar.gz" | sha256sum -c - \
 && mkdir -p /tmp/redis \
@@ -34,17 +41,17 @@ RUN apk -U upgrade && apk add --update --no-cache su-exec \
 && grep -q '^#define CONFIG_DEFAULT_PROTECTED_MODE 0$' /tmp/redis/src/server.h \
 && cd  /tmp/redis \
 && make -j $(getconf _NPROCESSORS_ONLN) && make install \
+&& runDeps="$( \
+		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
+			| tr ',' '\n' \
+			| sort -u \
+			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
+	)" \
 && mkdir -p /etc/redis/ && cp redis.conf ${SERVICE_CONF} \
-
-&& sed 's/^daemonize yes/daemonize no/' -i ${SERVICE_CONF} \
-&& sed 's/^bind 127.0.0.1/bind 0.0.0.0/' -i ${SERVICE_CONF} \
 && sed 's/^# unixsocket \/tmp\/redis.sock/unixsocket \/run\/redis\/redis.sock/' -i ${SERVICE_CONF} \
 && sed 's/^# unixsocketperm 700/unixsocketperm 777/' -i ${SERVICE_CONF} \
-&& sed '/^logfile/d' -i ${SERVICE_CONF} \
-
 && addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} \
 && adduser -g "${SERVICE_NAME} user" -D -h ${REDIS_DATA_DIR} -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER} \
-
 && apk del .build-deps \
 && rm -rf \
       /tmp/* \

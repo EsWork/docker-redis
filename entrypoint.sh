@@ -3,7 +3,7 @@ set -e
 
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
 
-function log() {
+log() {
   echo `date` $ME - $@
 }
 
